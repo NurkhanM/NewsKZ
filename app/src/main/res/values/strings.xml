@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewsKZ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">ToDo</string>
+    <string name="news_text">England defender Kyle Walker says France star Kylian Mbappe will not \"stand in my way of winning a World Cup\" as the pair prepare for their quarter-final pace battle.</string>
+</resources>

@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Главная"
+        app:cnb_iconColor="@color/white"/>
+    <item
+        android:id="@+id/newsFavorite"
+        android:icon="@drawable/ic_saved"
+        android:title="Избранные"
+        app:cnb_iconColor="@color/white"/>
+
+    <item
+        android:id="@+id/webSocketFragment"
+        android:icon="@drawable/ic_chat"
+        android:title="Чаты"
+        app:cnb_iconColor="@color/white"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="Профиль"
+        app:cnb_iconColor="@color/white"/>
+</menu>
