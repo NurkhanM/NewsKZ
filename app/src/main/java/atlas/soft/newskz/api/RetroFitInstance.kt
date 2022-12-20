@@ -22,7 +22,6 @@ object RetroFitInstance {
             .writeTimeout(2, TimeUnit.MINUTES) // write timeout
             .readTimeout(2, TimeUnit.MINUTES) // read timeout
             .addInterceptor(interceptor)
-//            .addInterceptor(OAuthInterceptor("Bearer", TOKEN_USER))
             .build()
 
         val gson = GsonBuilder()
