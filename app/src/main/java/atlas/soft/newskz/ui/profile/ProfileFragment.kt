@@ -22,6 +22,10 @@ class ProfileFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_profileFragment_to_myProfileFragment)
         }
 
+        view.nextProject.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_profileFragment_to_myProjectFragment)
+        }
+
         return  view
     }
 

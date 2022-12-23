@@ -1,6 +1,7 @@
 package atlas.soft.newskz.api
 
 import atlas.soft.newskz.api.controller.authController.AuthController
+import atlas.soft.newskz.api.controller.filterController.FilterController
 import atlas.soft.newskz.api.controller.newsController.NewsController
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -39,6 +40,9 @@ object RetroFitInstance {
     }
     val newsController: NewsController by lazy {
         retrofit.create(NewsController::class.java)
+    }
+    val filterController: FilterController by lazy {
+        retrofit.create(FilterController::class.java)
     }
 
 }

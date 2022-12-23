@@ -43,7 +43,7 @@ class SplashFragment : Fragment() {
         if (USER_TOKEN != ""){
             CoroutineScope(Dispatchers.Main).launch {
                 delay(2000)
-                Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_homeFragment)
+                Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_aboutFragment)
             }
         }else{
             CoroutineScope(Dispatchers.Main).launch {

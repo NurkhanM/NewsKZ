@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this)[HomeViewModels::class.java]
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        (activity as AppCompatActivity).chipNavigation.visibility = View.VISIBLE
+
 
         view.swipeRefreshLayout.setOnRefreshListener {
             recyclerViewProduct.removeAllViewsInLayout()
@@ -83,6 +83,10 @@ class HomeFragment : Fragment() {
         recyclerViewProduct.adapter = adapterProduct
         recyclerViewProduct.setHasFixedSize(true)
 
+
+        view.searchToolbar.setOnClickListener {
+                Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_filtersFragment)
+        }
 
         return view
     }

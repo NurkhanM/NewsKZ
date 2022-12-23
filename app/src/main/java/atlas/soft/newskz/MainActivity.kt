@@ -1,8 +1,10 @@
 package atlas.soft.newskz
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -20,14 +22,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        chipNavigation.setItemSelected(R.id.aboutFragment)
+
+
         chipNavigation.setOnItemSelectedListener { id ->
             val option = when (id) {
-                R.id.homeFragment -> {
-                    Navigation.findNavController(this, R.id.nav_host).navigate(R.id.homeFragment)
+                R.id.aboutFragment -> {
+                    Navigation.findNavController(this, R.id.nav_host).navigate(R.id.aboutFragment)
                 }
 
-                R.id.newsFavorite -> {
-                    Navigation.findNavController(this, R.id.nav_host).navigate(R.id.favoriteFragment)
+                R.id.homeFragment -> {
+                    Navigation.findNavController(this, R.id.nav_host).navigate(R.id.homeFragment)
                 }
 
                 R.id.webSocketFragment -> {
@@ -37,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                 else -> {
                     Navigation.findNavController(this, R.id.nav_host).navigate(R.id.profileFragment)
                 }
+
             }
         }
 
@@ -48,14 +55,15 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host)
 
         if (
-            navController.currentDestination!!.id == R.id.favoriteFragment ||
+            navController.currentDestination!!.id == R.id.homeFragment ||
             navController.currentDestination!!.id == R.id.chatFragment ||
             navController.currentDestination!!.id == R.id.profileFragment
         ) {
-            chipNavigation.id = 0
-            navController.navigate(R.id.homeFragment)
+            chipNavigation.setItemSelected(R.id.aboutFragment)
+            Navigation.findNavController(this, R.id.nav_host).navigate(R.id.aboutFragment)
+
         } else {
-            if (navController.currentDestination!!.id != R.id.homeFragment) {
+            if (navController.currentDestination!!.id != R.id.aboutFragment) {
                 super.onBackPressed()
             } else {
                 val startMain = Intent(Intent.ACTION_MAIN)

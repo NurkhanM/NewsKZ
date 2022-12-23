@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".ui.about.myCompany.MyCompanyFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Toolbar"
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Профиль"
+            android:text="О ЦАРИКЦ"
             android:textColor="@color/black_txt"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -76,7 +76,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Мой профиль"
+                            android:text="О центре"
                             android:textColor="@color/black_txt"
                             android:textSize="@dimen/text_all_size_parameter"
                             android:textStyle="bold" />
@@ -97,8 +97,6 @@
                 </LinearLayout>
 
 
-
-
                 <LinearLayout
                     android:id="@+id/nextSettings"
                     android:layout_width="match_parent"
@@ -117,7 +115,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Настройки"
+                            android:text="История создания"
                             android:textColor="@color/black_txt"
                             android:textSize="@dimen/text_all_size_parameter"
                             android:textStyle="bold" />
@@ -156,7 +154,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Доп функции"
+                            android:text="Этапы становления"
                             android:textColor="@color/black_txt"
                             android:textSize="@dimen/text_all_size_parameter"
                             android:textStyle="bold" />
@@ -176,7 +174,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/nextProject"
+                    android:id="@+id/nextAbout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -193,7 +191,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="О проекте"
+                            android:text="Услуги ЦАРИКЦ"
                             android:textColor="@color/black_txt"
                             android:textSize="@dimen/text_all_size_parameter"
                             android:textStyle="bold" />
@@ -211,41 +209,6 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/teal_200" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nextExitUser"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="10dp"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="30dp"
-                            app:tint="@color/orange_txt"
-                            android:src="@drawable/ic_exit" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Выход"
-                            android:textColor="@color/orange_txt"
-                            android:textSize="@dimen/text_all_size_parameter"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/teal_200" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

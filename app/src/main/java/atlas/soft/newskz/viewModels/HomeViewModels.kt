@@ -23,6 +23,7 @@ class HomeViewModels : ViewModel() {
     val myAllNews: MutableLiveData<Response<NewsIndexModels>> = MutableLiveData()
     val myLogin: MutableLiveData<Response<LoginModels>> = MutableLiveData()
     val myRegisterAcc: MutableLiveData<Response<RegisterModels>> = MutableLiveData()
+    val mySortProducts: MutableLiveData<Response<NewsIndexModels>> = MutableLiveData()
 
 
     fun allNews() {
@@ -36,12 +37,20 @@ class HomeViewModels : ViewModel() {
             myLogin.value = repo.postLoginRepository(params)
         }
     }
+
+
     fun postRegisterAcc (params: HashMap<String, RequestBody>, img: MultipartBody.Part? ) {
         viewModelScope.launch {
             myRegisterAcc.value = repo.postRegisterAccRepository(params, img)
         }
 
         Log.d(TAG, "postRegisterAcc: $params")
+    }
+
+    fun getSortProducts (auth: String, allPro: HashMap<String, String> ) {
+        viewModelScope.launch {
+            mySortProducts.value = repo.getSortProductsRepository(auth, allPro)
+        }
     }
 
 }

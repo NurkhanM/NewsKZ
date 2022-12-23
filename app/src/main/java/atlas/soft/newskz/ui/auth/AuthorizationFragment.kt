@@ -114,7 +114,7 @@ class AuthorizationFragment : Fragment() {
                 CoroutineScope(Dispatchers.Main).launch {
                     delay(2000)
                     Navigation.findNavController(view)
-                        .navigate(R.id.action_authorizationFragment_to_homeFragment)
+                        .navigate(R.id.action_authorizationFragment_to_aboutFragment)
                 }
 
                 preferencesTOKEN.edit().putString(KEY_TOKEN, USER_TOKEN).apply()

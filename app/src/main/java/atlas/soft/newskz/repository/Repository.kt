@@ -23,4 +23,8 @@ class Repository {
         return RetroFitInstance.authController.postRegisterAcc( params, img)
     }
 
+    suspend fun getSortProductsRepository(auth: String, allPro: HashMap<String, String>): Response<NewsIndexModels> {
+        return RetroFitInstance.filterController.getSortProducts( auth, allPro)
+    }
+
 }

@@ -1,15 +1,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_home"
-        android:title="Главная"
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/ic_about"
+        android:title="О нас"
         app:cnb_iconColor="@color/white"/>
+
     <item
-        android:id="@+id/newsFavorite"
-        android:icon="@drawable/ic_saved"
-        android:title="Избранные"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_news"
+        android:title="Новости"
         app:cnb_iconColor="@color/white"/>
+
 
     <item
         android:id="@+id/webSocketFragment"
