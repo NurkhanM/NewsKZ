@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_aboutFragment_to_myCompanyFragment"
             app:destination="@id/myCompanyFragment" />
+        <action
+            android:id="@+id/action_aboutFragment_to_myProjectFragment"
+            app:destination="@id/myProjectFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeInfoFragment"
@@ -71,9 +74,6 @@
         <action
             android:id="@+id/action_profileFragment_to_myProfileFragment"
             app:destination="@id/myProfileFragment" />
-        <action
-            android:id="@+id/action_profileFragment_to_myProjectFragment"
-            app:destination="@id/myProjectFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"

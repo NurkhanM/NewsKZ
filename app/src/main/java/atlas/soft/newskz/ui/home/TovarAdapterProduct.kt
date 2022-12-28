@@ -43,7 +43,7 @@ class TovarAdapterProduct(private val mIClickListnear: IClickListnearHome) :
 
         Glide.with(context).load(currentItem.img)
             .thumbnail(Glide.with(context).load(R.drawable.loader2))
-//            .fitCenter()
+            .centerCrop()
             .into(holder.itemView.img)
 
 
@@ -54,7 +54,7 @@ class TovarAdapterProduct(private val mIClickListnear: IClickListnearHome) :
 //        }
 
 
-        holder.itemView.news_title.text = currentItem.description
+        holder.itemView.news_title.text = currentItem.name
         holder.itemView.news_publication_time.text = currentItem.created_at
 
         holder.itemView.rowCostom.setOnClickListener {

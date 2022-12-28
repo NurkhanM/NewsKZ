@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import atlas.soft.newskz.R
 import atlas.soft.newskz.`interface`.IClickListnearHome
+import atlas.soft.newskz.`object`.AllProject.GET_ALL_PRODUCT_ID
 import atlas.soft.newskz.viewModels.HomeViewModels
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -47,8 +49,9 @@ class HomeFragment : Fragment() {
             object : IClickListnearHome {
                 override fun clickListener(baseID: Int) {
 //                    if (!USER_STATUS) {
-                        Navigation.findNavController(view)
-                            .navigate(R.id.action_homeFragment_to_homeInfoFragment)
+                    Navigation.findNavController(view)
+                        .navigate(R.id.action_homeFragment_to_homeInfoFragment)
+                    GET_ALL_PRODUCT_ID = baseID
 //                    } else {
 //                        ALL_ID_PRODUCTS = baseID
 //                        Navigation.findNavController(view)
@@ -56,7 +59,12 @@ class HomeFragment : Fragment() {
 //                    }
                 }
 
-                override fun clickListenerFavorite(baseID: Int, v: View, boolean: Boolean, pos: Int) {
+                override fun clickListenerFavorite(
+                    baseID: Int,
+                    v: View,
+                    boolean: Boolean,
+                    pos: Int
+                ) {
 //                    if (!USER_STATUS) {
 //                        Navigation.findNavController(view)
 //                            .navigate(R.id.action_homeFragment_to_authorizationFragment)
@@ -85,7 +93,7 @@ class HomeFragment : Fragment() {
 
 
         view.searchToolbar.setOnClickListener {
-                Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_filtersFragment)
+            Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_filtersFragment)
         }
 
         return view

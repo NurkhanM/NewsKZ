@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import atlas.soft.newskz.models.auth.login.LoginModels
 import atlas.soft.newskz.models.auth.register.RegisterModels
 import atlas.soft.newskz.models.news.index.NewsIndexModels
+import atlas.soft.newskz.models.news.show.ShowNewsModels
 import atlas.soft.newskz.repository.Repository
 import com.google.gson.JsonObject
 import kotlinx.coroutines.launch
@@ -21,6 +22,7 @@ class HomeViewModels : ViewModel() {
     private val repo = Repository()
 
     val myAllNews: MutableLiveData<Response<NewsIndexModels>> = MutableLiveData()
+    val myInfoNews: MutableLiveData<Response<ShowNewsModels>> = MutableLiveData()
     val myLogin: MutableLiveData<Response<LoginModels>> = MutableLiveData()
     val myRegisterAcc: MutableLiveData<Response<RegisterModels>> = MutableLiveData()
     val mySortProducts: MutableLiveData<Response<NewsIndexModels>> = MutableLiveData()
@@ -29,6 +31,12 @@ class HomeViewModels : ViewModel() {
     fun allNews() {
         viewModelScope.launch {
             myAllNews.value = repo.allNewsRepository()
+        }
+    }
+
+    fun infoNews(idNews: String) {
+        viewModelScope.launch {
+            myInfoNews.value = repo.infoNewsRepository(idNews)
         }
     }
 

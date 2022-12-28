@@ -26,6 +26,10 @@ class AboutFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_aboutFragment_to_myCompanyFragment)
         }
 
+        view.nextProject.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_aboutFragment_to_myProjectFragment)
+        }
+
 
         return  view
     }
